@@ -17,8 +17,8 @@ public class Userdetailserviceimpl implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		//userrepository.save(new User(1, "giri", new BCryptPasswordEncoder().encode("giri"), "ROLE_GIRI,ROLE_HARI", 'Y', 'Y', 'Y', 'Y'));
-		//System.out.println("accoutn created");
+	//  userrepository.save(new User(1, "giri", new BCryptPasswordEncoder().encode("giri"), "ROLE_GIRI,ROLE_HARI", 'Y', 'Y', 'Y', 'Y'));
+	//	System.out.println(new BCryptPasswordEncoder().encode("giri"));
 		
 		return new UserDetailimpl(userrepository.findByUname(username));
 		 
